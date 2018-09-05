@@ -1,0 +1,81 @@
+.div-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    width: 99%;
+    padding-top: 20vh;
+}
+
+.div-ios-bg {
+    width: 100%;
+    height:99%;
+    margin: 0px auto;
+    display:none;
+}
+
+.begin-sub-img1 {
+    margin-top: 5vh;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.begin-sub-txt1 {
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    font-size: 36px;
+    margin: 2vh auto 0vh auto;
+    color: #525252;
+
+}
+
+.begin-sub-txt2 {
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    font-size:40px;
+    margin: 6vh auto 0vh auto;
+    color: #ffffff;
+
+}
+
+.begin-sub-img2 {
+    margin-top: 2vh;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
+}
+
+.begin-sub-txt3 {
+    margin-top: 4vh;
+    left: 0px;
+    top: 0px;
+    padding-right: 4vh;
+    padding-left: 4vh;
+    z-index: -1;
+    font-size: 36px;
+    color: #b8b8b8;
+}
+
+.roundedRectangle-blue {
+    /*margin-left:60px ;*/
+    background: #008ef0;
+    /*margin-top: 20px;*/
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 65%;
+    /*width: 100px;*/
+    border-width: thin;
+    border-style: solid;
+    border-radius: 6px;
+    /*圆角的大小*/
+    border-color: #4c92df #4c92df #4c92df #4c92df;
+    /*边框颜色，依次为上、右、下、左*/
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=<%= metadata.description %>>
+    <meta property="og:title" content=<%= metadata.og_title %>>
+    <meta property="og:image" content=<%= metadata.og_image %>>
+    <meta property="og:site_name" content=<%= metadata.og_site_name %>>
+    <meta property="og:url" content=<%= metadata.og_url %>>
+    <meta property="og:type" content=<%= metadata.og_type %>>
+    <title>Invite</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ios_open_store.css">
+    <script type="text/javascript" src="/javascripts/Browser.js"></script>
+    <script type="text/javascript" src="/javascripts/GooglePlayLinks.js"></script>
+    <script type="text/javascript" src="/javascripts/AppStoreLinks.js"></script>
+    <script type="text/javascript" src="/javascripts/gautils.js"></script>
+    <script type="text/javascript" src="/javascripts/rpc.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        //判断是否移动端
+        if (browser.versions.mobile || browser.versions.android || browser.versions.ios) {
+            console.log("移动端")
+        }
+        var isEmptyTag = isEmpty("aa");
+        console.log("isEmpty=" + isEmptyTag)
+
+        var channel = '<%= channel %>'
+        var language = '<%= language %>'
+        var module = '<%= module %>'
+        var inviteKey = '<%= inviteKey %>'
+        var inviteKeyD = '<%= inviteKeyD %>'
+        var metadata = '<%= metadata %>'
+
+        console.log("channel=" + channel)
+        console.log("language=" + language)
+        console.log("module=" + module)
+        console.log("inviteKey=" + inviteKey)
+        console.log("inviteKeyD=" + inviteKeyD)
+        console.log("metadata=" + metadata)
+        console.log(JSON.stringify(metadata))
+
+        window.onload = function () {
+            setTimeout("start()", 50);
+        }
+
+        function start() {
+            // google analytics
+            initGA();
+            GASendPage();
+            // send inviteKey to server
+            sendInviteKeyToServer(inviteKey, inviteKeyD);
+            if (browser.versions.weixin) {
+                if (browser.versions.ios) {
+                    $("#guide_img").attr("src", "/images/wc_img1.jpg");
+                } else {
+                    $("#guide_img").attr("src", "/images/wc_img2.jpg");
+                }
+                $("#share_main").show();
+            } else if (browser.versions.weixin) {
+                if (browser.versions.ios) {
+                    $("#guide_img").attr("src", "/images/qq_img1.jpg");
+                } else {
+                    $("#guide_img").attr("src", "/images/qq_img2.jpg");
+                }
+                $("#share_main").show();
+            } else if (browser.versions.ios) {
+                openAppStore(channel);
+            } else if (browser.versions.android) {
+                openGooglePlay(channel, inviteKey);
+            } else {
+                openHomePage();
+            }
+        }
+
+        function openAppStore(channel) {
+            console.log("openAppStore,channel=" + channel)
+            var link = getAppStoreUrlByChannel(channel);
+            console.log("link=" + link)
+            GASendEvent(getPathName(), 'auto_forward_app_store', "");
+            $("#ios_download_bg").css('display', 'block');
+            $("#open_app_store").click(function () {
+                GASendEvent(getPathName(), 'click_ios_download', "");
+                window.location.href = link;
+            });
+            //window.location.href = link;
+        }
+
+        function openGooglePlay(channel, inviteKey) {
+            console.log("openGooglePlay,channel=" + channel + " ,inviteKey=" + inviteKey)
+            GASendEvent(getPathName(), 'auto_forward_play_store', "");
+            var link = getGooglePlayUrlByChannelAndInviteKey(channel, inviteKey);
+            console.log("link=" + link)
+            // window.location.href = link;
+        }
+
+        function openHomePage() {
+            console.log("openHomePage")
+            var link = "http://talkyou.me/";
+            window.location.href = link;
+        }
+
+        function sendInviteKeyToServer(inviteKey, inviteKeyD) {
+            if (inviteKey != null && inviteKey != '') {
+                saveInviteInfo(inviteKey, inviteKeyD);
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+<div id="ios_download_bg" class="div-ios-bg">
+    <div class="div-absolute ">
+        <img width='30%' class="begin-sub-img1" src="/images/tu_icon.png"/>
+        <p class="begin-sub-txt1"><strong>TalkU iOS </strong></p>
+        <p id="open_app_store" class="begin-sub-txt2 roundedRectangle-blue">DOWNLOAD APP </p>
+        <p class="begin-sub-txt3">Tap above to get this free calling app!</p>
+    </div>
+</div>
+
+<div id="share_main" class="share_main" style="display:none">
+    <img id="guide_img" src="/images/wc_img1.jpg" width="270" height="378"/>
+</div>
+</body>
+</html>
+
