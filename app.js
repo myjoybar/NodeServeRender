@@ -5,7 +5,6 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/user");
 const inviteRouter = require("./routes/invite");
 
-
 app.set("views", path.join(__dirname, "views"))
     .set("view engine", "ejs")
     .use(express.static(path.join(__dirname, 'public')))

@@ -1,13 +1,347 @@
 {
   "metas": [
     {
-      "language": "en",
-      "description": "让你爱上一种全新的沟通方式！电话短信统统免费，立即体验！",
-      "og_title": "说道免费电话",
-      "og_image": "",
-      "og_site_name": "talkyou.me",
-      "og_url": "",
-      "og_type": "article"
+      "cn": [
+        {
+          "module": "a",
+          "description": "让你爱上一种全新的沟通方式！电话短信统统免费，立即体验！",
+          "og_title": "说道免费电话",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "这里有免费电话，免费短信，还有海量全球号码，快来一探究竟！",
+          "og_title": "说道国际电话及国际短信",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "这是一个功能强大的APP，国内国际间电话及短信统统免费，快来省下你的话费！",
+          "og_title": "说道免费电话",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "不用去营业厅，不用在网上买号，说道有百万全球号码，总有一个是你喜欢的！",
+          "og_title": "说道海量国际号码",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "你可以在这里发短信，打电话，好友之间完全免费，无限量！试一下？",
+          "og_title": "说道免费电话及短信",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
+    },
+    {
+      "cnt": [
+        {
+          "module": "a",
+          "description": "讓你愛上一種新的溝通方式！電話簡訊統統免費，立即體驗！",
+          "og_title": "說道免費電話",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "這裡有免費電話，免費簡訊，還有海量全球號碼，快來一探究竟！",
+          "og_title": "說道免費電話",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "這是一個功能強大的APP，國內國際間電話及簡訊統統免費，快來省下你的話費！",
+          "og_title": "說道國際電話及國際簡訊",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "說道擁有百萬全球號碼，總有一個是你喜歡的！",
+          "og_title": "說道海量國際號碼",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "你可以在這裡發簡訊，打電話，好友之間完全免費，無限量！試一下？",
+          "og_title": "說道免費電話及簡訊",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
+    },
+    {
+      "en": [
+        {
+          "module": "a",
+          "description": "Join TalkU to enjoy free calls and texts, you will like it.",
+          "og_title": "Free Calls & Free Texts",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "Free calling, free texting! Enjoy the free service with family & friends.",
+          "og_title": "Enjoy Free Calls",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "Send unlimted free texts everyday to any phone number. Text with fun!",
+          "og_title": "Text to Any Number",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "A free second phone number, millions of global numbers, find YOUR number in TalkU.",
+          "og_title": "Get a 2nd Line",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "Join TalkU now for free phone calls & free texts, even internationally!",
+          "og_title": "Free International Calls",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
+    },
+    {
+      "es": [
+        {
+          "module": "a",
+          "description": "Únete a TalkU para que disfrutes de llamadas y textos gratis, te va a gustar.",
+          "og_title": "Llamadas y Textos Gratis",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "Llamar gratis, enviar textos gratis! Disfruta de este servicio gratuito con tu familia y amigos.",
+          "og_title": "Disfruta de Llamadas Gratis",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "Envía textos gratis ilimitados cada día a cualquier número de teléfono. Diviértete enviando textos!",
+          "og_title": "Textos a Cualquier Número",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "Una segunda línea telefónica gratuita, millones de números globales, encuentra TU número en TalkU",
+          "og_title": "Obtén una 2da Línea",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "Únete a TalkU para hacer llamadas y enviar textos gratis, incluso internacionales.",
+          "og_title": "Llamar y Enviar Textos Gratis",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
+    },
+    {
+      "fr": [
+        {
+          "module": "a",
+          "description": "Rejoignez TalkU pour profiter d'appels et SMS gratuits. Vous allez aimer.",
+          "og_title": "Appels et SMS gratuits",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "Appels et SMS gratuits ! Profitez de ce service gratuit avec votre famille et vos amis.",
+          "og_title": "Profitez d'appels gratuits",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "Envoyez tous les jours des SMS gratuits et illimités vers n'importe quel numéro. Faites-vous plaisir!",
+          "og_title": "SMS vers n'importe quel numéro",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "Un deuxième numéro de téléphone gratuit, des millions de numéros à l'international, trouvez VOTRE numéro dans TalkU.",
+          "og_title": "Obtenez une 2e ligne",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "Rejoignez TalkU pour profiter d'appels et SMS gratuits, même à l'international!",
+          "og_title": "Appels et SMS gratuits",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
+    },
+    {
+      "pt": [
+        {
+          "module": "a",
+          "description": "Cadastre-se no TalkU e faça ligações e SMS de graça - você vai adorar.",
+          "og_title": "Telefonemas & SMS Grátis",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "Llamar gratis, enviar textos gratis! Disfruta de este servicio gratuito con tu familia y amigos.",
+          "og_title": "Faça Ligações Gratuitas",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "Envie mensagens de textos ilimitadas todos os dias para qualquer número de telefone. Divirta-se enviando textos!",
+          "og_title": "Envie Mensagens para Qualquer Número",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "Um número de telefone adicional, milhares de números internacionais, encontre o SEU no TalkU.",
+          "og_title": "Tenha uma 2ª Linha",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "Cadastre-se no TalkU agora para ligações telefônicas e mensagens de texto grátis, mesmo internacionais!",
+          "og_title": "Ligações e SMS Grátis",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
+    },
+    {
+      "tr": [
+        {
+          "module": "a",
+          "description": "Ücretsiz çağrı ve sms keyfini sürmek için TalkU'a katılın, seveceksiniz.",
+          "og_title": "Ücretsiz Çağrı ve SMS",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "b",
+          "description": "Ücretsiz arama, ücretsiz sms! Ailenizle, dostlarınızla bu ücretsiz servisin keyfini sürün.",
+          "og_title": "Ücretsiz Çağrının Keyfi Sür",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "c",
+          "description": "Her gün, her cep telefonuna sınırsız sayıda SMS gönderin. Mesajla Eğlenin!",
+          "og_title": "Her Telefona SMS Çekin",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "d",
+          "description": "Ücretsiz bir ikinci hat edinin, milyonlarca küresel numara, TalkU'da KENDİ numaranızı bulun.",
+          "og_title": "İkinci bir hat edinin",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        },
+        {
+          "module": "e",
+          "description": "Şimdi TalkU'a katılın, ücretsiz çağrı yapın ve SMS gönderin, uluslararası da dahil!",
+          "og_title": "Ücretsiz Arama ve SMS",
+          "og_image": "",
+          "og_site_name": "talkyou.me",
+          "og_url": "",
+          "og_type": "article"
+        }
+      ]
     }
   ]
 }
