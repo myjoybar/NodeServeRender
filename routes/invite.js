@@ -32,7 +32,7 @@ router.get("/:channel/:language/:module", function (req, res) {
                             console.log("originMetaData= " + JSON.stringify(originMetaData));
                             console.log("originMetaData.description= " + originMetaData.description);
                             if (originMetaData.module == module) {
-                                originMetaData.og_image = combineImageUrl(module)
+                                originMetaData.og_image = combineImageUrl(language,module)
                                 originMetaData.og_url = combineOrgUrl(channel, language, module)
                                 newMeta = originMetaData;
                                 break;
@@ -79,8 +79,8 @@ function combineOrgUrl(channel, language, module) {
     return url
 }
 
-function combineImageUrl(module) {
-    var imgUrl = "/images/share/cn/share_" + module + ".png"
+function combineImageUrl(language,module) {
+    var imgUrl = "/images/share/"+language+"/share_" + module + ".png"
     return imgUrl
 
 }
