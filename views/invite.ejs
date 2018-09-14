@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="<%= metadata.description %>">
     <meta property="og:title" content="<%= metadata.og_title %>">
-    <meta property="og:image" content="<%= metadata.og_image %>">
+    <meta property="og:image" content="<%= resourceHost %><%= metadata.og_image %>">
     <meta property="og:site_name" content="<%= metadata.og_site_name %>">
     <meta property="og:url" content="<%= metadata.og_url %>">
     <meta property="og:type" content="<%= metadata.og_type %>">
@@ -17,32 +17,33 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1BA691">
 
-    <link rel="stylesheet" type="text/css" href="/stylesheets/ios_open_store.css">
-    <script type="text/javascript" src="/javascripts/Browser.js"></script>
-    <script type="text/javascript" src="/javascripts/GooglePlayLinks.js"></script>
-    <script type="text/javascript" src="/javascripts/AppStoreLinks.js"></script>
-    <script type="text/javascript" src="/javascripts/gautils.js"></script>
-    <script type="text/javascript" src="/javascripts/rpc.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= resourceHost %>/stylesheets/ios_open_store.css">
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/Browser.js"></script>
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/GooglePlayLinks.js"></script>
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/AppStoreLinks.js"></script>
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/gautils.js"></script>
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/rpc.js"></script>
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="<%= resourceHost %>/javascripts/Log.js"></script>
 
     <script type="text/javascript">
 
         var channel = '<%= channel %>'
         var language = '<%= language %>'
-        var module = '<%= module %>'
+        var moduleName = '<%= moduleName %>'
         var inviteKey = '<%= inviteKey %>'
         var inviteKeyD = '<%= inviteKeyD %>'
         var metadata = '<%= metadata %>'
         var metadata_og_url = '<%= metadata.og_url %>'
 
-        console.log("channel=" + channel)
-        console.log("language=" + language)
-        console.log("module=" + module)
-        console.log("inviteKey=" + inviteKey)
-        console.log("inviteKeyD=" + inviteKeyD)
-        console.log("metadata=" + metadata)
-        console.log("metadata.og_url=" + metadata_og_url)
-        console.log(JSON.stringify(metadata))
+        printLog("channel=" + channel)
+        printLog("language=" + language)
+        printLog("moduleName=" + moduleName)
+        printLog("inviteKey=" + inviteKey)
+        printLog("inviteKeyD=" + inviteKeyD)
+        printLog("metadata=" + metadata)
+        printLog("metadata.og_url=" + metadata_og_url)
+        printLog(JSON.stringify(metadata))
 
         window.onload = function () {
             setTimeout(start(), 50);
@@ -69,6 +70,7 @@
                 }
                 $("#share_main").show();
             } else if (browser.versions.ios) {
+                initIOSDownloadRedirect();
                 openAppStore(channel);
             } else if (browser.versions.android) {
                 openGooglePlay(channel, inviteKey);
@@ -77,29 +79,34 @@
             }
         }
 
-        function openAppStore(channel) {
-            console.log("openAppStore,channel=" + channel)
-            var link = getAppStoreUrlByChannel(channel);
-            console.log("link=" + link)
-            GASendEvent(getPathName(), 'auto_forward_app_store', "");
-            $("#ios_download_bg").css('display', 'block');
+        function initIOSDownloadRedirect() {
             $("#open_app_store").click(function () {
                 GASendEvent(getPathName(), 'click_ios_download', "");
+                var link = getAppStoreUrlByChannel(channel);
+                printLog("IOSDownload,link=" + link)
                 window.location.href = link;
             });
-            //window.location.href = link;
+        }
+
+        function openAppStore(channel) {
+            var link = getAppStoreUrlByChannel(channel);
+            printLog("openAppStore,channel=" + channel)
+            printLog("link=" + link)
+            GASendEvent(getPathName(), 'auto_forward_app_store', "");
+            $("#ios_download_bg").css('display', 'block');
+            window.location.href = link;
         }
 
         function openGooglePlay(channel, inviteKey) {
-            console.log("openGooglePlay,channel=" + channel + " ,inviteKey=" + inviteKey)
+            printLog("openGooglePlay,channel=" + channel + " ,inviteKey=" + inviteKey)
             GASendEvent(getPathName(), 'auto_forward_play_store', "");
             var link = getGooglePlayUrlByChannelAndInviteKey(channel, inviteKey);
-            console.log("link=" + link)
+            printLog("link=" + link)
             // window.location.href = link;
         }
 
         function openHomePage() {
-            console.log("openHomePage")
+            printLog("openHomePage")
             var link = "http://talkyou.me/";
             window.location.href = link;
         }
